@@ -17,21 +17,27 @@ const HomeScreen = props => {
   },[])
 
   const getAllPokemon = (next) => {
-    fetchAllPokemon(next, 50)
-      .then(data => {
-        let tempPokemons = transformPokemonWithImage(data.results)
-        setPokemon(next ? { ...pokemons, tempPokemons } : tempPokemons)
-        setNextFetch(data.next)
-        setRefreshing(false)
-      })
-      .catch((error) => {
-        setRefreshing(false)
-      })
+    setTimeout(() => {
+      fetchAllPokemon(next, 50)
+        .then(data => {
+          let tempPokemons = transformPokemonWithImage(data.results)
+          setPokemon(next ? [ ...pokemons, ...tempPokemons ] : tempPokemons)
+          setNextFetch(data.next)
+          setRefreshing(false)
+        })
+        .catch((error) => {
+          setRefreshing(false)
+        })
+    }, 1000)
   }
 
   const handleRefresh = () => {
     setRefreshing(true)
-    getAllPokemon(next)
+    getAllPokemon(null)
+  }
+
+  const handleLoadMore = () => {
+    getAllPokemon(nextFetch)
   }
 
   const RenderPokemon = ({ pokemon }) => {
@@ -55,12 +61,12 @@ const HomeScreen = props => {
   return (
     <RootComponent>
       <Section>
-        <Item center>
-          <BodyBold>Lalapopo</BodyBold>
+        <Item small center>
+          <BodyBold>Pokédex</BodyBold>
         </Item>
       </Section>
       <Section>
-        <Item center>
+        <Item small center height={'70%'}>
           <FlatList
             data={pokemons}
             keyExtractor={(item) => item.id}
@@ -69,6 +75,8 @@ const HomeScreen = props => {
             numColumns={5}
             refreshing={refreshing}
             onRefresh={handleRefresh}
+            onEndReached={handleLoadMore}
+            onEndReachedThreshold={0}
           />
         </Item>
       </Section>
