@@ -4,14 +4,14 @@ const getIdPokemon = (uri) => {
   return uri.replace(`${BASE_URL}pokemon/`, '').replace('/','')
 }
 
-export const transformPokemonWithImage = (pokemons) => {
+export const transformPokemonWithImage = (pokemons, withFilter) => {
   resultPokemons = []
   if (pokemons.length > 1 ){
     pokemons.map((pokemon) => {
-      let pokemonId = getIdPokemon(pokemon.url)
+      let pokemonId = getIdPokemon(withFilter ? pokemon.pokemon.url : pokemon.url)
       let resultPokemon = {
         id: pokemonId,
-        name: pokemon.name,
+        name: withFilter ? pokemon.pokemon.name : pokemon.name,
         imageUri: `${IMAGE_URI}${pokemonId}.png`
 
       }

@@ -1,6 +1,6 @@
 import React from "react"
-import { StyleSheet, Image, TouchableOpacity } from "react-native"
-import { Item } from "../components/index"
+import { StyleSheet, Image, TouchableOpacity, FlatList, ActivityIndicator, Dimensions } from "react-native"
+import { Item, Section, RenderIf } from "../components/index"
 import BodyRegular from "../components/UI/BodyRegular"
 import Colors from '../constants/colors'
 
@@ -15,6 +15,17 @@ const RenderDetailWithOneValuePokemon = ({ text, value }) => (
   </Item>
 )
 
+export const RenderTypeName = ({ name, isFilter }) => (
+  <Item plain row style={styles.multipleContainerText}>
+    <BodyRegular style={{ color: Colors.primary }}>{name.toUpperCase()}</BodyRegular>
+    <RenderIf condition={isFilter}>
+      <Item plain style={styles.containerXButton}>
+        <BodyRegular style={styles.xButton}>X</BodyRegular>
+      </Item>
+    </RenderIf>
+  </Item>
+)
+
 const RenderDetailWithMultipleValuePokemon = ({ text, value }) => (
   <Item plain row style={styles.detailBox}>
     <Item backgroundColor={Colors.lightGrey} center small width={'30%'}>
@@ -24,9 +35,7 @@ const RenderDetailWithMultipleValuePokemon = ({ text, value }) => (
       {
         value.map((data) => {
           return (
-            <Item key={data.slot} plain style={styles.multipleContainerText}>
-              <BodyRegular style={{ color: Colors.primary }}>{data.type.name.toUpperCase()}</BodyRegular>
-            </Item>
+            <RenderTypeName key={data.slot} name={data.type.name} />
           )
         })
       }
@@ -63,25 +72,77 @@ export const RenderPokemon = ({ pokemon, handleSelectedPokemon, selectedPokemonI
   )
 }
 
+export const RenderListPokemon = ({ refreshing, pokemons, RenderItemPokemon, handleRefresh, handleLoadMore }) => {
+  return (
+    <Item small center borderRadius={12} backgroundColor={Colors.whiteGrey02} height={'63%'}>
+      <RenderIf condition={!refreshing}>
+        <FlatList
+          data={pokemons}
+          keyExtractor={(item) => item.id}
+          renderItem={RenderItemPokemon}
+          horizontal={false}
+          numColumns={5}
+          refreshing={refreshing}
+          onRefresh={handleRefresh}
+          onEndReached={handleLoadMore}
+          onEndReachedThreshold={0.3}
+        />
+      </RenderIf>
+      <RenderIf condition={refreshing}>
+        <Item style={styles.containerActivtyIndicator}>
+          <ActivityIndicator size="large" color={Colors.blue} />
+        </Item>
+      </RenderIf>
+    </Item>
+  )
+}
+
+export const RenderContainerDetailPokemon = ({ selectedPokemon, loaderPokemonDetail }) => {
+  return (
+    <Item 
+      small center height={'30%'}
+      borderRadius={12}
+      backgroundColor={Colors.whiteGrey02}
+      style={styles.containerDetail}
+    >
+      <Section>
+        <RenderIf condition={selectedPokemon}>
+          <RenderIf condition={!loaderPokemonDetail}>
+            <RenderDetailPokemon selectedPokemon={selectedPokemon} />
+          </RenderIf>
+          <RenderIf condition={loaderPokemonDetail}>
+            <Item style={styles.containerActivtyIndicator}>
+              <ActivityIndicator size="large" color={Colors.blue} />
+            </Item>
+          </RenderIf>
+        </RenderIf>
+        <RenderIf condition={!selectedPokemon}>
+          <Image source={require('../assets/Pokeball.png')} style={styles.pokeballImage} />
+        </RenderIf>
+      </Section>
+    </Item>
+  )
+}
+
 const styles = StyleSheet.create({
   pokemonContainerSelected: {
     borderColor: Colors.blue,
     borderWidth: 3,
     borderRadius: 12,
-    margin: 8,
-    width: 52,
-    height: 52
+    margin: 8
   },
   pokemonContainer: {
     borderColor: Colors.whiteGrey01,
     borderWidth: 3,
     borderRadius: 12,
-    margin: 8,
-    width: 52,
-    height: 52
+    margin: 8
+  },
+  pokeballImage: {
+    height: Dimensions.get('window').height / 5,
+    resizeMode: 'contain',
+    alignSelf: 'center'
   },
   pokemonImage: {
-    marginTop: 3,
     height: 40,
     width: 40
   },
@@ -96,5 +157,20 @@ const styles = StyleSheet.create({
     paddingRight: 4,
     backgroundColor: Colors.secondary,
     marginRight: 5
+  },
+  containerDetail: {
+    marginTop: 10
+  },
+  containerActivtyIndicator: {
+    marginTop: 40
+  },
+  containerXButton: {
+    borderLeftWidth: 0.5,
+    borderLeftColor: Colors.primary,
+    marginLeft: 5
+  },
+  xButton: {
+    color: Colors.primary,
+    paddingLeft: 5
   }
 })
