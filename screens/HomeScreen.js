@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react"
-import { StyleSheet, FlatList, Image, TouchableOpacity } from "react-native"
-import { RootComponent, Section, Item } from "../components/index"
+import { StyleSheet, FlatList, ActivityIndicator } from "react-native"
+import { RootComponent, Section, Item, RenderIf } from "../components/index"
 import BodyBold from "../components/UI/BodyBold"
-import BodyRegular from "../components/UI/BodyRegular"
-import { fetchAllPokemon } from '../services/pokemon'
-import { transformPokemonWithImage } from '../transform/pokemon'
 import Colors from '../constants/colors'
+import { RenderDetailPokemon, RenderPokemon } from './ComponentPokemon'
+import { fetchAllPokemon, fetchOnePokemon } from '../services/pokemon'
+import { transformPokemonWithImage } from '../transform/pokemon'
 
 const HomeScreen = props => {
   const [pokemons, setPokemon] = useState([])
   const [refreshing, setRefreshing] = useState(false)
   const [nextFetch, setNextFetch] = useState('')
+  const [selectedPokemonId, setSelectedPokemonId] = useState()
   const [selectedPokemon, setSelectedPokemon] = useState()
+  const [loaderPokemonDetail, setLoaderPokemonDetail] = useState(false)
+
   useEffect(() => {
     getAllPokemon(null)
   },[])
+
+  useEffect(() => {
+    setLoaderPokemonDetail(false)
+  },[selectedPokemon])
 
   const getAllPokemon = (next) => {
     setTimeout(() => {
@@ -33,6 +40,8 @@ const HomeScreen = props => {
 
   const handleRefresh = () => {
     setRefreshing(true)
+    setSelectedPokemonId()
+    setSelectedPokemon()
     getAllPokemon(null)
   }
 
@@ -40,33 +49,39 @@ const HomeScreen = props => {
     getAllPokemon(nextFetch)
   }
 
-  const RenderPokemon = ({ pokemon }) => {
-    return (
-      <TouchableOpacity onPress={() => setSelectedPokemon(pokemon.id)}>
-        <Item
-          center plain
-          key={pokemon.id}
-          style={pokemon.id === selectedPokemon ? styles.pokemonContainerSelected : styles.pokemonContainer}
-        >
-          <Image source={{uri: pokemon.imageUri}} style={ styles.pokemonImage} />
-        </Item>
-      </TouchableOpacity>
-    )
+  const handleSelectedPokemon = (pokemonId) => {
+    setTimeout(() => {
+      setSelectedPokemonId(pokemonId)
+      setLoaderPokemonDetail(true)
+    }, 0)
+    setTimeout(() => {
+      fetchOnePokemon(pokemonId)
+        .then(data => {
+          setSelectedPokemon(data) 
+        })
+        .catch((error) => {
+          setLoaderPokemonDetail(false)
+        })
+    }, 100)
   }
 
   const renderItem = ({ item }) => {
-    return <RenderPokemon pokemon={item} />
+    return <RenderPokemon
+      pokemon={item}
+      handleSelectedPokemon={handleSelectedPokemon}
+      selectedPokemonId={selectedPokemonId}
+    />
   }
   
   return (
     <RootComponent>
-      <Section>
+      <Section style={{ backgroundColor: 'red' }}>
         <Item small center>
-          <BodyBold>Pokédex</BodyBold>
+          <BodyBold style={{ color: Colors.primary }}>Pokédex</BodyBold>
         </Item>
       </Section>
       <Section>
-        <Item small center height={'70%'}>
+        <Item small center height={'60%'}>
           <FlatList
             data={pokemons}
             keyExtractor={(item) => item.id}
@@ -79,35 +94,27 @@ const HomeScreen = props => {
             onEndReachedThreshold={0}
           />
         </Item>
+        <Item small center height={'40%'}>
+          <BodyBold>Pokémon Detail</BodyBold>
+          <RenderIf condition={selectedPokemon}>
+            <RenderIf condition={!loaderPokemonDetail}>
+              <RenderDetailPokemon selectedPokemon={selectedPokemon} />
+            </RenderIf>
+            <RenderIf condition={loaderPokemonDetail}>
+              <Item style={styles.containerActivtyIndicator}>
+                <ActivityIndicator size="large" color={Colors.blue} />
+              </Item>
+            </RenderIf>
+          </RenderIf>
+        </Item>
       </Section>
     </RootComponent>
   )
 }
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1
-  },
-  pokemonContainerSelected: {
-    borderColor: Colors.blue,
-    borderWidth: 3,
-    borderRadius: 12,
-    margin: 8,
-    width: 52,
-    height: 52
-  },
-  pokemonContainer: {
-    borderColor: Colors.whiteGrey01,
-    borderWidth: 3,
-    borderRadius: 12,
-    margin: 8,
-    width: 52,
-    height: 52
-  },
-  pokemonImage: {
-    marginTop: 3,
-    height: 40,
-    width: 40
+  containerActivtyIndicator: {
+    marginTop: 40
   }
 })
 
