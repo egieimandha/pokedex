@@ -75,7 +75,6 @@ const HomeScreen = props => {
   const getAllPokemonWithType= () => {
     fetchAllPokemonWithType(selectedFilter.name)
       .then(data => {
-        console.log(data)
         let tempPokemons = transformPokemonWithImage(data.pokemon, true)
         setPokemon(tempPokemons)
       })
