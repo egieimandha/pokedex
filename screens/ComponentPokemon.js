@@ -100,7 +100,7 @@ export const RenderListPokemon = ({ refreshing, pokemons, RenderItemPokemon, han
 export const RenderContainerDetailPokemon = ({ selectedPokemon, loaderPokemonDetail }) => {
   return (
     <Item 
-      small center
+      small center height={'30%'}
       borderRadius={12}
       backgroundColor={Colors.whiteGrey02}
       style={styles.containerDetail}
@@ -111,10 +111,8 @@ export const RenderContainerDetailPokemon = ({ selectedPokemon, loaderPokemonDet
             <RenderDetailPokemon selectedPokemon={selectedPokemon} />
           </RenderIf>
           <RenderIf condition={loaderPokemonDetail}>
-            <Item small>
-              <Item style={styles.containerActivtyIndicator}>
-                <ActivityIndicator size="large" color={Colors.blue} />
-              </Item>
+            <Item style={styles.containerActivtyIndicator}>
+              <ActivityIndicator size="large" color={Colors.blue} />
             </Item>
           </RenderIf>
         </RenderIf>
@@ -140,11 +138,12 @@ const styles = StyleSheet.create({
     margin: 8
   },
   pokeballImage: {
-    height: Dimensions.get('window').height / 5,
+    height: Dimensions.get('window').height /5,
     resizeMode: 'contain',
     alignSelf: 'center'
   },
   pokemonImage: {
+    // marginTop: 3,
     height: 40,
     width: 40
   },
@@ -164,7 +163,7 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   containerActivtyIndicator: {
-    height: Dimensions.get('window').height / 5
+    marginTop: 40
   },
   containerXButton: {
     borderLeftWidth: 0.5,
