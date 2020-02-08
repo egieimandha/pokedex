@@ -9,12 +9,7 @@ import {
   RenderListPokemon,
   RenderContainerDetailPokemon
 } from './ComponentPokemon'
-import {
-  fetchAllPokemon,
-  fetchOnePokemon,
-  fetchAllPokemonType,
-  fetchAllPokemonWithType
-} from '../services/pokemon'
+import Pokemon from '../services/pokemon'
 import { transformPokemonWithImage } from '../transform/pokemon'
 import Modal from 'react-native-modal'
 
@@ -40,7 +35,22 @@ const HomeScreen = props => {
   },[selectedPokemon])
 
   useEffect(() => {
-    setRefreshing(false)
+    if (selectedPokemonId) {
+      setLoaderPokemonDetail(true)
+      Pokemon.getOnePokemon(selectedPokemonId)
+        .then(data => {
+          setSelectedPokemon(data) 
+        })
+        .catch((error) => {
+          setLoaderPokemonDetail(false)
+        })
+    } else setLoaderPokemonDetail(false)
+  },[selectedPokemonId])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setRefreshing(false)
+    }, 1000)
   },[pokemons])
 
   useEffect(() => {
@@ -53,7 +63,7 @@ const HomeScreen = props => {
 
   const getAllPokemon = (next) => {
     setTimeout(() => {
-      fetchAllPokemon(next, 50)
+      Pokemon.getAllPokemon(next, 50)
         .then(data => {
           setNextFetch(data.next)
           let tempPokemons = transformPokemonWithImage(data.results)
@@ -66,14 +76,14 @@ const HomeScreen = props => {
   }
 
   const getAllPokemonType= () => {
-    fetchAllPokemonType()
-      .then(data => {
+    Pokemon.getAllType()
+      .then((data) => {
         setPokemonType(data.results)
       })
   }
 
   const getAllPokemonWithType= () => {
-    fetchAllPokemonWithType(selectedFilter.name)
+    Pokemon.getAllPokemonWithType(selectedFilter.name)
       .then(data => {
         let tempPokemons = transformPokemonWithImage(data.pokemon, true)
         setPokemon(tempPokemons)
@@ -95,19 +105,7 @@ const HomeScreen = props => {
   }
 
   const handleSelectedPokemon = (pokemonId) => {
-    setTimeout(() => {
-      setSelectedPokemonId(pokemonId)
-      setLoaderPokemonDetail(true)
-    }, 0)
-    setTimeout(() => {
-      fetchOnePokemon(pokemonId)
-        .then(data => {
-          setSelectedPokemon(data) 
-        })
-        .catch((error) => {
-          setLoaderPokemonDetail(false)
-        })
-    }, 100)
+    setSelectedPokemonId(pokemonId)
   }
 
   const handleFilter = (type) => {
@@ -195,7 +193,7 @@ const styles = StyleSheet.create({
   filterItem: {                                  
     position: 'absolute',                                          
     top: 45,                                                    
-    left: 20, 
+    right: 20, 
   },
   filterButton: {
     width: '20%',     
@@ -203,7 +201,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.whiteGrey02,                                    
     position: 'absolute',                                          
     top: 20,                                                    
-    right: 20, 
+    left: 20, 
   },
   containerModal: {
     paddingVertical: 20,

@@ -35,7 +35,7 @@ export const RenderTypeName = ({ name, isFilter }) => {
 }
 
 export const RenderDetailWithMultipleValuePokemon = ({ text, value }) => {
-  if (text && value && value.length > 1) {
+  if (text && value && value.length > 0) {
     return (
       <Item plain row style={styles.detailBox}>
         <Item backgroundColor={Colors.lightGrey} center small width={'30%'}>

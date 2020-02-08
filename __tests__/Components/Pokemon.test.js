@@ -161,7 +161,7 @@ describe('Components Pokemon', () => {
   })
   describe('Render Pokemon', () => {
     const testRenderPokemon = renderer.create(
-      <RenderPokemon selectedPokemon={mockPokemons[2]} />
+      <RenderPokemon selectedPokemon={mockPokemons[2]} handleSelectedPokemon={mockHandleSelectedPokemon} />
     )
     it('should be match to snapsot', () => {
       expect(testRenderPokemon.toJSON()).toMatchSnapshot()
