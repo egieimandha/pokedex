@@ -1,0 +1,1490 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Pokemon Render Container Detail Pokemons should be activity indicator if loaderPokemonDetail true 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "marginTop": 10,
+      },
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F2F2F2",
+        "borderRadius": 12,
+        "height": "30%",
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  <View
+    pointerEvents="auto"
+    style={
+      Array [
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          Object {
+            "marginTop": 40,
+          },
+          Object {},
+        ]
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#2282CE"
+        hidesWhenStopped={true}
+        size="large"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render Container Detail Pokemons should be match to snapsot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "marginTop": 10,
+      },
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F2F2F2",
+        "borderRadius": 12,
+        "height": "30%",
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  <View
+    pointerEvents="auto"
+    style={
+      Array [
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "paddingHorizontal": 0,
+            "paddingVertical": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "paddingVertical": 10,
+            },
+            undefined,
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#D1D1D2",
+                "paddingVertical": 5,
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 15,
+              }
+            }
+          >
+            CHARIZARD
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "paddingVertical": 10,
+            },
+            Object {
+              "borderBottomColor": "#E6E6E6",
+              "borderBottomWidth": 1,
+              "paddingTop": 5,
+            },
+            Object {
+              "flexDirection": "row",
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#D1D1D2",
+                "paddingVertical": 5,
+                "width": "30%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 15,
+              }
+            }
+          >
+            Type
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "flexDirection": "row",
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+                "width": "70%",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "paddingVertical": 10,
+                },
+                Object {
+                  "backgroundColor": "#4f4f4f",
+                  "borderRadius": 4,
+                  "marginRight": 5,
+                  "paddingLeft": 4,
+                  "paddingRight": 4,
+                },
+                Object {
+                  "flexDirection": "row",
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 0,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 15,
+                }
+              }
+            >
+              FLYING
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "paddingVertical": 10,
+                },
+                Object {
+                  "backgroundColor": "#4f4f4f",
+                  "borderRadius": 4,
+                  "marginRight": 5,
+                  "paddingLeft": 4,
+                  "paddingRight": 4,
+                },
+                Object {
+                  "flexDirection": "row",
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 0,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 15,
+                }
+              }
+            >
+              FIRE
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "paddingVertical": 10,
+            },
+            Object {
+              "borderBottomColor": "#E6E6E6",
+              "borderBottomWidth": 1,
+              "paddingTop": 5,
+            },
+            Object {
+              "flexDirection": "row",
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#D1D1D2",
+                "paddingVertical": 5,
+                "width": "30%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 15,
+              }
+            }
+          >
+            Height
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "flexDirection": "row",
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+                "width": "70%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 15,
+              }
+            }
+          >
+            17"
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "paddingVertical": 10,
+            },
+            Object {
+              "borderBottomColor": "#E6E6E6",
+              "borderBottomWidth": 1,
+              "paddingTop": 5,
+            },
+            Object {
+              "flexDirection": "row",
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#D1D1D2",
+                "paddingVertical": 5,
+                "width": "30%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 15,
+              }
+            }
+          >
+            Weight
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "paddingVertical": 10,
+              },
+              undefined,
+              Object {
+                "flexDirection": "row",
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+                "width": "70%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 15,
+              }
+            }
+          >
+            905 lbs.
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render Container Detail Pokemons should be render placeholder if props is empty 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "marginTop": 10,
+      },
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F2F2F2",
+        "borderRadius": 12,
+        "height": "30%",
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  <View
+    pointerEvents="auto"
+    style={
+      Array [
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../assets/Pokeball.png",
+        }
+      }
+      style={
+        Object {
+          "alignSelf": "center",
+          "height": 266.8,
+          "resizeMode": "contain",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render Detail Pokemon should be match to snapsot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      undefined,
+      Object {
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        undefined,
+        Object {
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D1D1D2",
+            "paddingVertical": 5,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": undefined,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        CHARIZARD
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        Object {
+          "borderBottomColor": "#E6E6E6",
+          "borderBottomWidth": 1,
+          "paddingTop": 5,
+        },
+        Object {
+          "flexDirection": "row",
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D1D1D2",
+            "paddingVertical": 5,
+            "width": "30%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": undefined,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        Type
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "flexDirection": "row",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+            "width": "70%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "paddingVertical": 10,
+            },
+            Object {
+              "backgroundColor": "#4f4f4f",
+              "borderRadius": 4,
+              "marginRight": 5,
+              "paddingLeft": 4,
+              "paddingRight": 4,
+            },
+            Object {
+              "flexDirection": "row",
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 15,
+            }
+          }
+        >
+          FLYING
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "paddingVertical": 10,
+            },
+            Object {
+              "backgroundColor": "#4f4f4f",
+              "borderRadius": 4,
+              "marginRight": 5,
+              "paddingLeft": 4,
+              "paddingRight": 4,
+            },
+            Object {
+              "flexDirection": "row",
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 15,
+            }
+          }
+        >
+          FIRE
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        Object {
+          "borderBottomColor": "#E6E6E6",
+          "borderBottomWidth": 1,
+          "paddingTop": 5,
+        },
+        Object {
+          "flexDirection": "row",
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D1D1D2",
+            "paddingVertical": 5,
+            "width": "30%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": undefined,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        Height
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "flexDirection": "row",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+            "width": "70%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": undefined,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        17"
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        Object {
+          "borderBottomColor": "#E6E6E6",
+          "borderBottomWidth": 1,
+          "paddingTop": 5,
+        },
+        Object {
+          "flexDirection": "row",
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D1D1D2",
+            "paddingVertical": 5,
+            "width": "30%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": undefined,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        Weight
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          undefined,
+          Object {
+            "flexDirection": "row",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+            "width": "70%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": undefined,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        905 lbs.
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render Detail Pokemon should be render nothing if props is empty 1`] = `null`;
+
+exports[`Components Pokemon Render Detail With Multiple Value Pokemon snapshot should be match to snapsot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "borderBottomColor": "#E6E6E6",
+        "borderBottomWidth": 1,
+        "paddingTop": 5,
+      },
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        undefined,
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D1D1D2",
+          "paddingVertical": 5,
+          "width": "30%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 15,
+        }
+      }
+    >
+      Type
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+          "paddingHorizontal": 10,
+          "paddingVertical": 5,
+          "width": "70%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          Object {
+            "backgroundColor": "#4f4f4f",
+            "borderRadius": 4,
+            "marginRight": 5,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+          },
+          Object {
+            "flexDirection": "row",
+            "paddingHorizontal": 0,
+            "paddingVertical": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        FLYING
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "paddingVertical": 10,
+          },
+          Object {
+            "backgroundColor": "#4f4f4f",
+            "borderRadius": 4,
+            "marginRight": 5,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+          },
+          Object {
+            "flexDirection": "row",
+            "paddingHorizontal": 0,
+            "paddingVertical": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 15,
+          }
+        }
+      >
+        FIRE
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render Detail With Multiple Value Pokemon snapshot should be render nothing if props is empty 1`] = `null`;
+
+exports[`Components Pokemon Render Detail With One Value Pokemon snapshot should be match to snapsot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "borderBottomColor": "#E6E6E6",
+        "borderBottomWidth": 1,
+        "paddingTop": 5,
+      },
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        undefined,
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D1D1D2",
+          "paddingVertical": 5,
+          "width": "30%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 15,
+        }
+      }
+    >
+      Height
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+          "paddingHorizontal": 10,
+          "paddingVertical": 5,
+          "width": "70%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 15,
+        }
+      }
+    >
+      17
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render Detail With One Value Pokemon snapshot should be render nothing if props is empty 1`] = `null`;
+
+exports[`Components Pokemon Render Pokemon should be match to snapsot 1`] = `null`;
+
+exports[`Components Pokemon Render Pokemon should be render frame selected if props equals to pokemon.id 1`] = `null`;
+
+exports[`Components Pokemon Render Pokemon should be render nothing if props is empty 1`] = `null`;
+
+exports[`Components Pokemon Render Type Name should be match to snapsot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "backgroundColor": "#4f4f4f",
+        "borderRadius": 4,
+        "marginRight": 5,
+        "paddingLeft": 4,
+        "paddingRight": 4,
+      },
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFFFFF",
+        "fontFamily": "NunitoSans-Regular",
+        "fontSize": 15,
+      }
+    }
+  >
+    FLYING
+  </Text>
+</View>
+`;
+
+exports[`Components Pokemon Render Type Name should be render nothing if props is empty 1`] = `null`;
+
+exports[`Components Pokemon Render Type Name should be render nothing with label X if have prop isFilter 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      Object {
+        "backgroundColor": "#4f4f4f",
+        "borderRadius": 4,
+        "marginRight": 5,
+        "paddingLeft": 4,
+        "paddingRight": 4,
+      },
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFFFFF",
+        "fontFamily": "NunitoSans-Regular",
+        "fontSize": 15,
+      }
+    }
+  >
+    FLYING
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        Object {
+          "borderLeftColor": "#FFFFFF",
+          "borderLeftWidth": 0.5,
+          "marginLeft": 5,
+        },
+        Object {
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 15,
+          "paddingLeft": 5,
+        }
+      }
+    >
+      X
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render list Pokemons should be activity indicator if resfeshing true 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      undefined,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F2F2F2",
+        "borderRadius": 12,
+        "height": "63%",
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "paddingVertical": 10,
+        },
+        Object {
+          "marginTop": 40,
+        },
+        Object {},
+      ]
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#2282CE"
+      hidesWhenStopped={true}
+      size="large"
+    />
+  </View>
+</View>
+`;
+
+exports[`Components Pokemon Render list Pokemons should be match to snapsot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "paddingVertical": 10,
+      },
+      undefined,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#F2F2F2",
+        "borderRadius": 12,
+        "height": "63%",
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "id": "4",
+          "imageUri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+          "name": "charmander",
+        },
+        Object {
+          "id": "5",
+          "imageUri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+          "name": "charmeleon",
+        },
+        Object {
+          "id": "6",
+          "imageUri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+          "name": "charizard",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={5}
+    onContentSizeChange={[Function]}
+    onEndReached={[MockFunction]}
+    onEndReachedThreshold={0.3}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onRefresh={[MockFunction]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[MockFunction]}
+        refreshing={false}
+      />
+    }
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "paddingVertical": 10,
+                  },
+                  Object {
+                    "borderColor": "#E6E6E6",
+                    "borderRadius": 12,
+                    "borderWidth": 3,
+                    "margin": 8,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 0,
+                  },
+                ]
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 40,
+                    "width": 40,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "paddingVertical": 10,
+                  },
+                  Object {
+                    "borderColor": "#E6E6E6",
+                    "borderRadius": 12,
+                    "borderWidth": 3,
+                    "margin": 8,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 0,
+                  },
+                ]
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 40,
+                    "width": 40,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "paddingVertical": 10,
+                  },
+                  Object {
+                    "borderColor": "#E6E6E6",
+                    "borderRadius": 12,
+                    "borderWidth": 3,
+                    "margin": 8,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "paddingHorizontal": 0,
+                    "paddingVertical": 0,
+                  },
+                ]
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 40,
+                    "width": 40,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`Components Pokemon Render list Pokemons should be render nothing if props is empty 1`] = `null`;

@@ -8,7 +8,7 @@ import Colors from "../constants/colors"
 const RootComponent = props => {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1,backgroundColor:Colors.primary }} forceInset={{ top: 'always' }}>
+      <SafeAreaView style={{ flex: 1,backgroundColor:'red' }} forceInset={{ top: 'always' }}>
         <StatusBar
           barStyle="dark-content"
           backgroundColor={Colors.primary}

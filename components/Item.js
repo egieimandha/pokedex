@@ -21,7 +21,8 @@ export default function Item(props) {
     row,
     column,
     backgroundColor,
-    borderRadius
+    borderRadius,
+    horizontal
   } = props
 
   return (
@@ -38,6 +39,7 @@ export default function Item(props) {
           ...(end ? { alignItems: 'flex-end' } : null),
           ...(center ? { alignItems: 'center' } : null),
           ...(verticalCenter ? { justifyContent: 'center' } : null),
+          ...(horizontal ? { paddingHorizontal: 10 } : null),
           ...(plain ? { paddingVertical: 0, paddingHorizontal: 0 } : null),
           ...(spaceBetween ? { justifyContent: 'space-between' } : null),
           ...(spaceAround ? { justifyContent: 'space-around' } : null),
